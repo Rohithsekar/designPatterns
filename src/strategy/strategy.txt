@@ -1,0 +1,20 @@
+
+In the example, we have created behaviour classes implementing their respective interfaces(Weaponbehaviour
+and MovementBehaviour) . Instead of thinking of the character behaviours as set of behaviours, we'll start
+thinking them of as a family of algorithms.
+
+The HAS-A relationship is an interesting one: each character object has a weapon behaviour(weapon)
+and movement behaviour(movement) to which it delegates weilding weapon and moving respectively.
+
+When you put two classes together like this, you're using composition. Instead of inheriting their behaviour, the
+characters get their behaviour by being composed with the right behaviour object.
+
+This is an important technique and infact  it is a design principle:
+"FAVOR COMPOSITION OVER INHERITANCE".
+
+As you can see, creating systems using composition gives you a lot more flexibility. Not only does it let you
+encapsulate a family of algorithms into their own set of classes, but it also lets you change behaviour at runtime,
+as long as the object you're composing with, implements the appropriate behaviour interface.
+
+
+
